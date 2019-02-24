@@ -5,8 +5,10 @@
 		"type": "AzureDatabricks",
 		"typeProperties": {
 			"domain": "https://eastus2.azuredatabricks.net",
-			"existingClusterId": "0224-064416-ember835",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzYzQ1MzgwNy1mMTA4LTQzYzctODc3YS1jZDg4YjZmMzEzYzUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"newClusterNodeType": "Standard_DS3_v2",
+			"newClusterNumOfWorker": "1",
+			"newClusterVersion": "3.5.x-scala2.11",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI2MDk4OWQwNC0zMGU4LTQ0MjYtYTdmMi1kNWM2NjZkZDA1ZWYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime2",
