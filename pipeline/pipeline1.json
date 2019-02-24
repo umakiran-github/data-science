@@ -13,7 +13,7 @@
 					"secureInput": false
 				},
 				"typeProperties": {
-					"pythonFile": "dbfs:/FileStore/tables/adls_connect__1_-eb314.py",
+					"pythonFile": "dbfs:/FileStore/tables/adls_connect-cf6e7.py",
 					"libraries": [
 						{
 							"jar": ""
