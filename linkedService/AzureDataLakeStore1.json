@@ -1,0 +1,19 @@
+{
+	"name": "AzureDataLakeStore1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://kirandatalakestore1.azuredatalakestore.net/webhdfs/v1",
+			"servicePrincipalId": "65b1fe42-7af6-4c47-8ba0-629da83e4150",
+			"tenant": "2b8eaa08-d28e-42fe-bd3b-c6162e2623fd",
+			"subscriptionId": "98366d3a-1e49-4270-b9f9-8c0498b17038",
+			"resourceGroupName": "KiranResourceGroup",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4NzIwN2M5Zi05NjBiLTQ0ZDYtYTMzOS03ODM5MmNjZTVlMzUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
