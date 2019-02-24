@@ -1,0 +1,30 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Python1",
+				"type": "DatabricksSparkPython",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"pythonFile": "dbfs:/FileStore/tables/adls_connect-cf6e7.py",
+					"libraries": [
+						{
+							"jar": ""
+						}
+					]
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	}
+}
