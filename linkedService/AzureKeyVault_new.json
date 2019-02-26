@@ -1,0 +1,9 @@
+{
+	"name": "AzureKeyVault_new",
+	"properties": {
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://Kiran-Azure-Key-Vault.vault.azure.net/"
+		}
+	}
+}
