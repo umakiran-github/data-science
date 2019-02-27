@@ -1,0 +1,30 @@
+{
+	"name": "pipeline3",
+	"properties": {
+		"activities": [
+			{
+				"name": "Spark1",
+				"type": "HDInsightSpark",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"rootPath": "spark-scripts",
+					"entryFilePath": "simple.py",
+					"sparkJobLinkedService": {
+						"referenceName": "AzureBlobStorage1",
+						"type": "LinkedServiceReference"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedServiceHD_OnDemand",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	}
+}
