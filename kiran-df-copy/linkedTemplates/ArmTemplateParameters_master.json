@@ -26,8 +26,8 @@
 		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 			"value": "KiranResourceGroup"
 		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"value": "https://kiran-key-vault.vault.azure.net/"
+		"AzureKeyVault_new_properties_typeProperties_baseUrl": {
+			"value": "https://Kiran-Azure-Key-Vault.vault.azure.net/"
 		}
 	}
 }
