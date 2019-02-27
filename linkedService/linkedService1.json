@@ -1,0 +1,20 @@
+{
+	"name": "linkedService1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "FtpServer",
+		"typeProperties": {
+			"host": "52.184.154.163",
+			"port": "22",
+			"enableSsl": true,
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Basic",
+			"userName": "sshuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzNTc4YjA1ZS1kMzdhLTQ3OTUtODgzZS04ODUxMGZkNGI2YWUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime2",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
