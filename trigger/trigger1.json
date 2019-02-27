@@ -1,0 +1,27 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline2",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"Name": "JobSchedule"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2019-02-27T08:40:00.000Z",
+				"endTime": "2019-02-28T11:40:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
