@@ -15,6 +15,26 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"linkedServiceHDI_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'linkedServiceHDI'"
+		},
+		"linkedServiceHD_OnDemand_clusterPassword": {
+			"type": "secureString",
+			"metadata": "Secure string for 'clusterPassword' of 'linkedServiceHD_OnDemand'"
+		},
+		"linkedServiceHD_OnDemand_clusterSshPassword": {
+			"type": "secureString",
+			"metadata": "Secure string for 'clusterSshPassword' of 'linkedServiceHD_OnDemand'"
+		},
+		"linkedServiceHD_OnDemand_servicePrincipalKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'servicePrincipalKey' of 'linkedServiceHD_OnDemand'"
+		},
 		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
 			"type": "string",
 			"defaultValue": "https://kirandatalakestore1.azuredatalakestore.net/webhdfs/v1"
@@ -38,6 +58,34 @@
 		"AzureKeyVault_new_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://Kiran-Azure-Key-Vault.vault.azure.net/"
+		},
+		"linkedServiceHDI_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "admin"
+		},
+		"linkedServiceHD_OnDemand_properties_typeProperties_hostSubscriptionId": {
+			"type": "string",
+			"defaultValue": "98366d3a-1e49-4270-b9f9-8c0498b17038"
+		},
+		"linkedServiceHD_OnDemand_properties_typeProperties_clusterResourceGroup": {
+			"type": "string",
+			"defaultValue": "KiranResourceGroup"
+		},
+		"linkedServiceHD_OnDemand_properties_typeProperties_servicePrincipalId": {
+			"type": "string",
+			"defaultValue": "65b1fe42-7af6-4c47-8ba0-629da83e4150"
+		},
+		"linkedServiceHD_OnDemand_properties_typeProperties_tenant": {
+			"type": "string",
+			"defaultValue": "2b8eaa08-d28e-42fe-bd3b-c6162e2623fd"
+		},
+		"linkedServiceHD_OnDemand_properties_typeProperties_clusterUserName": {
+			"type": "string",
+			"defaultValue": "admin"
+		},
+		"linkedServiceHD_OnDemand_properties_typeProperties_clusterSshUserName": {
+			"type": "string",
+			"defaultValue": "sshuser"
 		},
 		"containerUri": {
 			"type": "string",
@@ -72,6 +120,21 @@
 					"AzureDatabricks1_accessToken": {
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"linkedServiceHDI_password": {
+						"value": "[parameters('linkedServiceHDI_password')]"
+					},
+					"linkedServiceHD_OnDemand_clusterPassword": {
+						"value": "[parameters('linkedServiceHD_OnDemand_clusterPassword')]"
+					},
+					"linkedServiceHD_OnDemand_clusterSshPassword": {
+						"value": "[parameters('linkedServiceHD_OnDemand_clusterSshPassword')]"
+					},
+					"linkedServiceHD_OnDemand_servicePrincipalKey": {
+						"value": "[parameters('linkedServiceHD_OnDemand_servicePrincipalKey')]"
+					},
 					"AzureKeyVault_new_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVault_new_properties_typeProperties_baseUrl')]"
 					},
@@ -89,6 +152,27 @@
 					},
 					"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_resourceGroupName')]"
+					},
+					"linkedServiceHDI_properties_typeProperties_userName": {
+						"value": "[parameters('linkedServiceHDI_properties_typeProperties_userName')]"
+					},
+					"linkedServiceHD_OnDemand_properties_typeProperties_hostSubscriptionId": {
+						"value": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_hostSubscriptionId')]"
+					},
+					"linkedServiceHD_OnDemand_properties_typeProperties_clusterResourceGroup": {
+						"value": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_clusterResourceGroup')]"
+					},
+					"linkedServiceHD_OnDemand_properties_typeProperties_servicePrincipalId": {
+						"value": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_servicePrincipalId')]"
+					},
+					"linkedServiceHD_OnDemand_properties_typeProperties_tenant": {
+						"value": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_tenant')]"
+					},
+					"linkedServiceHD_OnDemand_properties_typeProperties_clusterUserName": {
+						"value": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_clusterUserName')]"
+					},
+					"linkedServiceHD_OnDemand_properties_typeProperties_clusterSshUserName": {
+						"value": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_clusterSshUserName')]"
 					}
 				}
 			},
