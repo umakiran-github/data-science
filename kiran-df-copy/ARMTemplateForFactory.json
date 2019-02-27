@@ -86,6 +86,10 @@
 		"linkedServiceHD_OnDemand_properties_typeProperties_clusterSshUserName": {
 			"type": "string",
 			"defaultValue": "sshuser"
+		},
+		"trigger1_properties_pipeline2_parameters_Name": {
+			"type": "string",
+			"defaultValue": "JobSchedule"
 		}
 	},
 	"variables": {
@@ -398,6 +402,39 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]",
 				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime2')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/trigger1')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pipeline2",
+							"type": "PipelineReference"
+						},
+						"parameters": {
+							"Name": "[parameters('trigger1_properties_pipeline2_parameters_Name')]"
+						}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Hour",
+						"interval": 1,
+						"startTime": "2019-02-27T08:40:00.000Z",
+						"endTime": "2019-02-28T11:40:00.000Z",
+						"timeZone": "UTC"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/pipeline2')]"
 			]
 		}
 	]
