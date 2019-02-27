@@ -21,7 +21,7 @@
 					}
 				},
 				"linkedServiceName": {
-					"referenceName": "linkedServiceHD_OnDemand",
+					"referenceName": "linkedServiceHDI",
 					"type": "LinkedServiceReference"
 				}
 			}
