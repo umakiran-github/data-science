@@ -6,9 +6,12 @@
 		"typeProperties": {
 			"domain": "https://eastus2.azuredatabricks.net",
 			"newClusterNodeType": "Standard_DS3_v2",
-			"newClusterNumOfWorker": "1:8",
+			"newClusterNumOfWorker": "1:4",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
 			"newClusterVersion": "5.1.x-scala2.11",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIyNzJlNTkyOS02NzQ1LTQ2ZTYtODc3Zi0zZDIzODZjMDlhZDkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhOGUwZmRiZC03YzczLTQ1NDMtODNmMi0yODhjMzBhODRhM2QiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime2",
