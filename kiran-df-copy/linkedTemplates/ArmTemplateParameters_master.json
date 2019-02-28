@@ -34,9 +34,6 @@
 		},
 		"linkedService1_properties_typeProperties_userName": {
 			"value": "sshuser"
-		},
-		"trigger1_properties_pipeline2_parameters_Name": {
-			"value": "JobSchedule"
 		}
 	}
 }
