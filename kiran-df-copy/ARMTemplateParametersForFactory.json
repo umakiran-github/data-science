@@ -14,9 +14,6 @@
 		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
-		"linkedService1_password": {
-			"value": ""
-		},
 		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
 			"value": "https://kirandatalakestore1.azuredatalakestore.net/webhdfs/v1"
 		},
@@ -31,9 +28,6 @@
 		},
 		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 			"value": "KiranResourceGroup"
-		},
-		"linkedService1_properties_typeProperties_userName": {
-			"value": "sshuser"
 		},
 		"trigger1_properties_pipeline2_parameters_Name": {
 			"value": "JobSchedule"
