@@ -6,13 +6,13 @@
             "value": "kiran-df-copy"
         },
         "AzureBlobStorage1_connectionString": {
-            "value": ""
+            "value": "DefaultEndpointsProtocol=https;AccountName=kiranazurestorage;AccountKey=gbkHcRZiUgypmn6Wyr1kQBLO4l+E/G5yh6O12ig9p7HVTlPOpsIGzz3FsEpAo2Kgu7XjCM2WND8b8U85kiF7WA==;EndpointSuffix=core.windows.net"
         },
         "AzureDataLakeStore1_servicePrincipalKey": {
-            "value": ""
+            "value": "Bn1nCbkpkkhpYlw7mW74K3i/GfxJqGXV9qGdiip+3R8="
         },
         "AzureDatabricks1_accessToken": {
-            "value": ""
+            "value": "dapidd66d27f9d448e1d0ba2b9d82f77a348"
         },
         "AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
             "value": "https://kirandatalakestore1.azuredatalakestore.net/webhdfs/v1"
