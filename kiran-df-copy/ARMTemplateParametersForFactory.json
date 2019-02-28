@@ -17,18 +17,6 @@
 		"linkedService1_password": {
 			"value": ""
 		},
-		"linkedServiceHDI_password": {
-			"value": ""
-		},
-		"linkedServiceHD_OnDemand_clusterPassword": {
-			"value": ""
-		},
-		"linkedServiceHD_OnDemand_clusterSshPassword": {
-			"value": ""
-		},
-		"linkedServiceHD_OnDemand_servicePrincipalKey": {
-			"value": ""
-		},
 		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
 			"value": "https://kirandatalakestore1.azuredatalakestore.net/webhdfs/v1"
 		},
@@ -44,31 +32,7 @@
 		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 			"value": "KiranResourceGroup"
 		},
-		"AzureKeyVault_new_properties_typeProperties_baseUrl": {
-			"value": "https://Kiran-Azure-Key-Vault.vault.azure.net/"
-		},
 		"linkedService1_properties_typeProperties_userName": {
-			"value": "sshuser"
-		},
-		"linkedServiceHDI_properties_typeProperties_userName": {
-			"value": "admin"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_hostSubscriptionId": {
-			"value": "98366d3a-1e49-4270-b9f9-8c0498b17038"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_clusterResourceGroup": {
-			"value": "KiranResourceGroup"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_servicePrincipalId": {
-			"value": "65b1fe42-7af6-4c47-8ba0-629da83e4150"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_tenant": {
-			"value": "2b8eaa08-d28e-42fe-bd3b-c6162e2623fd"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_clusterUserName": {
-			"value": "admin"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_clusterSshUserName": {
 			"value": "sshuser"
 		},
 		"trigger1_properties_pipeline2_parameters_Name": {

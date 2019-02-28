@@ -23,22 +23,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'linkedService1'"
 		},
-		"linkedServiceHDI_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'linkedServiceHDI'"
-		},
-		"linkedServiceHD_OnDemand_clusterPassword": {
-			"type": "secureString",
-			"metadata": "Secure string for 'clusterPassword' of 'linkedServiceHD_OnDemand'"
-		},
-		"linkedServiceHD_OnDemand_clusterSshPassword": {
-			"type": "secureString",
-			"metadata": "Secure string for 'clusterSshPassword' of 'linkedServiceHD_OnDemand'"
-		},
-		"linkedServiceHD_OnDemand_servicePrincipalKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'servicePrincipalKey' of 'linkedServiceHD_OnDemand'"
-		},
 		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
 			"type": "string",
 			"defaultValue": "https://kirandatalakestore1.azuredatalakestore.net/webhdfs/v1"
@@ -59,39 +43,7 @@
 			"type": "string",
 			"defaultValue": "KiranResourceGroup"
 		},
-		"AzureKeyVault_new_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://Kiran-Azure-Key-Vault.vault.azure.net/"
-		},
 		"linkedService1_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "sshuser"
-		},
-		"linkedServiceHDI_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "admin"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_hostSubscriptionId": {
-			"type": "string",
-			"defaultValue": "98366d3a-1e49-4270-b9f9-8c0498b17038"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_clusterResourceGroup": {
-			"type": "string",
-			"defaultValue": "KiranResourceGroup"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_servicePrincipalId": {
-			"type": "string",
-			"defaultValue": "65b1fe42-7af6-4c47-8ba0-629da83e4150"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_tenant": {
-			"type": "string",
-			"defaultValue": "2b8eaa08-d28e-42fe-bd3b-c6162e2623fd"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_clusterUserName": {
-			"type": "string",
-			"defaultValue": "admin"
-		},
-		"linkedServiceHD_OnDemand_properties_typeProperties_clusterSshUserName": {
 			"type": "string",
 			"defaultValue": "sshuser"
 		},
@@ -224,19 +176,6 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/AzureKeyVault_new')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "AzureKeyVault",
-				"typeProperties": {
-					"baseUrl": "[parameters('AzureKeyVault_new_properties_typeProperties_baseUrl')]"
-				}
-			},
-			"dependsOn": []
-		},
-		{
 			"name": "[concat(parameters('factoryName'), '/linkedService1')]",
 			"type": "Microsoft.DataFactory/factories/linkedServices",
 			"apiVersion": "2018-06-01",
@@ -262,86 +201,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime2')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/linkedServiceHDI')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "HDInsight",
-				"typeProperties": {
-					"clusterUri": "https://KiranHDInsight.azurehdinsight.net",
-					"userName": "[parameters('linkedServiceHDI_properties_typeProperties_userName')]",
-					"password": {
-						"type": "SecureString",
-						"value": "[parameters('linkedServiceHDI_password')]"
-					},
-					"isEspEnabled": false,
-					"linkedServiceName": {
-						"referenceName": "AzureBlobStorage1",
-						"type": "LinkedServiceReference"
-					}
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime2",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime2')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/linkedServiceHD_OnDemand')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"type": "HDInsightOnDemand",
-				"typeProperties": {
-					"clusterType": "hadoop",
-					"clusterSize": 3,
-					"timeToLive": "00:05:00",
-					"version": "3.6",
-					"hostSubscriptionId": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_hostSubscriptionId')]",
-					"clusterResourceGroup": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_clusterResourceGroup')]",
-					"servicePrincipalId": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_servicePrincipalId')]",
-					"osType": "Linux",
-					"tenant": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_tenant')]",
-					"clusterNamePrefix": "OnDemand",
-					"clusterUserName": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_clusterUserName')]",
-					"clusterPassword": {
-						"type": "SecureString",
-						"value": "[parameters('linkedServiceHD_OnDemand_clusterPassword')]"
-					},
-					"clusterSshUserName": "[parameters('linkedServiceHD_OnDemand_properties_typeProperties_clusterSshUserName')]",
-					"clusterSshPassword": {
-						"type": "SecureString",
-						"value": "[parameters('linkedServiceHD_OnDemand_clusterSshPassword')]"
-					},
-					"servicePrincipalKey": {
-						"type": "SecureString",
-						"value": "[parameters('linkedServiceHD_OnDemand_servicePrincipalKey')]"
-					},
-					"linkedServiceName": {
-						"referenceName": "AzureBlobStorage1",
-						"type": "LinkedServiceReference"
-					},
-					"headNodeSize": "",
-					"dataNodeSize": "",
-					"zookeeperNodeSize": ""
-				},
-				"connectVia": {
-					"referenceName": "integrationRuntime2",
-					"type": "IntegrationRuntimeReference"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/integrationRuntimes/integrationRuntime2')]",
-				"[concat(variables('factoryId'), '/linkedServices/AzureBlobStorage1')]"
 			]
 		},
 		{
