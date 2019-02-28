@@ -5,13 +5,16 @@
 		"factoryName": {
 			"value": "kiran-df-copy"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStore1_servicePrincipalKey": {
 			"value": ""
 		},
 		"AzureDatabricks1_accessToken": {
 			"value": ""
 		},
-		"AzureBlobStorage1_connectionString": {
+		"linkedService1_password": {
 			"value": ""
 		},
 		"linkedServiceHDI_password": {
@@ -43,6 +46,9 @@
 		},
 		"AzureKeyVault_new_properties_typeProperties_baseUrl": {
 			"value": "https://Kiran-Azure-Key-Vault.vault.azure.net/"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"value": "sshuser"
 		},
 		"linkedServiceHDI_properties_typeProperties_userName": {
 			"value": "admin"

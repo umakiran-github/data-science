@@ -7,6 +7,10 @@
 			"metadata": "Data Factory Name",
 			"defaultValue": "kiran-df-copy"
 		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
 		"AzureDataLakeStore1_servicePrincipalKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'servicePrincipalKey' of 'AzureDataLakeStore1'"
@@ -15,9 +19,9 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
 		},
-		"AzureBlobStorage1_connectionString": {
+		"linkedService1_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+			"metadata": "Secure string for 'password' of 'linkedService1'"
 		},
 		"linkedServiceHDI_password": {
 			"type": "secureString",
@@ -58,6 +62,10 @@
 		"AzureKeyVault_new_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://Kiran-Azure-Key-Vault.vault.azure.net/"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sshuser"
 		},
 		"linkedServiceHDI_properties_typeProperties_userName": {
 			"type": "string",
@@ -118,14 +126,17 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
 					"AzureDataLakeStore1_servicePrincipalKey": {
 						"value": "[parameters('AzureDataLakeStore1_servicePrincipalKey')]"
 					},
 					"AzureDatabricks1_accessToken": {
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
-					"AzureBlobStorage1_connectionString": {
-						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					"linkedService1_password": {
+						"value": "[parameters('linkedService1_password')]"
 					},
 					"linkedServiceHDI_password": {
 						"value": "[parameters('linkedServiceHDI_password')]"
@@ -156,6 +167,9 @@
 					},
 					"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
 						"value": "[parameters('AzureDataLakeStore1_properties_typeProperties_resourceGroupName')]"
+					},
+					"linkedService1_properties_typeProperties_userName": {
+						"value": "[parameters('linkedService1_properties_typeProperties_userName')]"
 					},
 					"linkedServiceHDI_properties_typeProperties_userName": {
 						"value": "[parameters('linkedServiceHDI_properties_typeProperties_userName')]"
